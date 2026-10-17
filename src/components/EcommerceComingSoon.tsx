@@ -1,8 +1,25 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { CalendarDays, MessageCircle, CheckCircle2, ArrowRight } from 'lucide-react';
 import { BRAND_DETAILS } from '../data/products';
 import { Language } from '../types';
 import { CART_ENABLED } from '../config';
+
+const LAUNCH_AT = new Date('2026-11-01T18:51:27+08:00').getTime();
+const SECOND_IN_MS = 1000;
+const MINUTE_IN_MS = 60 * SECOND_IN_MS;
+const HOUR_IN_MS = 60 * MINUTE_IN_MS;
+const DAY_IN_MS = 24 * HOUR_IN_MS;
+
+const getCountdown = () => {
+  const remaining = Math.max(0, LAUNCH_AT - Date.now());
+
+  return {
+    days: Math.floor(remaining / DAY_IN_MS),
+    hours: Math.floor((remaining % DAY_IN_MS) / HOUR_IN_MS),
+    minutes: Math.floor((remaining % HOUR_IN_MS) / MINUTE_IN_MS),
+    seconds: Math.floor((remaining % MINUTE_IN_MS) / SECOND_IN_MS),
+  };
+};
 
 interface EcommerceComingSoonProps {
   language: Language;
@@ -15,6 +32,15 @@ export const EcommerceComingSoon: React.FC<EcommerceComingSoonProps> = ({
 }) => {
   const [emailOrPhone, setEmailOrPhone] = useState('');
   const [subscribed, setSubscribed] = useState(false);
+  const [countdown, setCountdown] = useState(getCountdown);
+
+  useEffect(() => {
+    const timer = window.setInterval(() => {
+      setCountdown(getCountdown());
+    }, SECOND_IN_MS);
+
+    return () => window.clearInterval(timer);
+  }, []);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -69,23 +95,24 @@ export const EcommerceComingSoon: React.FC<EcommerceComingSoonProps> = ({
                 <p className="text-xs uppercase tracking-wider text-stone-400 mb-3 font-medium">
                   Public Gateway Launch Countdown
                 </p>
-                <div className="grid grid-cols-4 gap-3 max-w-sm text-center">
-                  <div className="bg-stone-900 border border-stone-800 p-2.5 rounded">
-                    <span className="block text-2xl font-serif text-white font-medium tabular-nums">24</span>
-                    <span className="text-[10px] text-stone-400 uppercase tracking-wider">Days</span>
-                  </div>
-                  <div className="bg-stone-900 border border-stone-800 p-2.5 rounded">
-                    <span className="block text-2xl font-serif text-white font-medium tabular-nums">14</span>
-                    <span className="text-[10px] text-stone-400 uppercase tracking-wider">Hours</span>
-                  </div>
-                  <div className="bg-stone-900 border border-stone-800 p-2.5 rounded">
-                    <span className="block text-2xl font-serif text-white font-medium tabular-nums">38</span>
-                    <span className="text-[10px] text-stone-400 uppercase tracking-wider">Mins</span>
-                  </div>
-                  <div className="bg-stone-900 border border-stone-800 p-2.5 rounded">
-                    <span className="block text-2xl font-serif text-white font-medium tabular-nums">52</span>
-                    <span className="text-[10px] text-stone-400 uppercase tracking-wider">Secs</span>
-                  </div>
+                <div
+                  className="grid grid-cols-4 gap-3 max-w-sm text-center"
+                  role="timer"
+                  aria-label={`${countdown.days} days, ${countdown.hours} hours, ${countdown.minutes} minutes, ${countdown.seconds} seconds until launch`}
+                >
+                  {([
+                    ['days', 'Days'],
+                    ['hours', 'Hours'],
+                    ['minutes', 'Mins'],
+                    ['seconds', 'Secs'],
+                  ] as const).map(([unit, label]) => (
+                    <div key={unit} className="bg-stone-900 border border-stone-800 p-2.5 rounded">
+                      <span className="block text-2xl font-serif text-white font-medium tabular-nums">
+                        {String(countdown[unit]).padStart(2, '0')}
+                      </span>
+                      <span className="text-[10px] text-stone-400 uppercase tracking-wider">{label}</span>
+                    </div>
+                  ))}
                 </div>
               </div>
 
