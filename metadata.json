@@ -1,0 +1,6 @@
+{
+  "name": "DK Fashion MY - Contemporary Luxury & Apparel Portfolio",
+  "description": "Official showcase and portfolio for DK Fashion MY (dkfashionmy.com), featuring bespoke menswear, luxury womenswear, ready-to-wear collections, and upcoming e-commerce integration.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
