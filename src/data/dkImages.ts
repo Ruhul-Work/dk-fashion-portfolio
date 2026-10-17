@@ -1,49 +1,65 @@
-// Semantic mappings for DK Fashion brand assets & products from dk-image folder
+import evolveWhiteDeck from '../assets/images/dk-image/whatsapp-image-2026-10-17-9-04-36-am.jpeg';
+import evolveWhiteSlate from '../assets/images/dk-image/whatsapp-image-2026-10-17-9-04-40-am.jpeg';
+import evolveWhiteDetail from '../assets/images/dk-image/whatsapp-image-2026-10-17-9-04-36-am-1.jpeg';
+import futureCyberCarBlack from '../assets/images/dk-image/whatsapp-image-2026-10-17-9-04-37-am-1.jpeg';
+import futureCyberCityBlue from '../assets/images/dk-image/whatsapp-image-2026-10-17-9-04-39-am.jpeg';
+import futureCyberCityDetail from '../assets/images/dk-image/whatsapp-image-2026-10-17-9-04-39-am-1.jpeg';
+import awakenEyeWhite from '../assets/images/dk-image/whatsapp-image-2026-10-17-9-04-41-am-1.jpeg';
+import awakenEyeDetail from '../assets/images/dk-image/whatsapp-image-2026-10-17-9-04-41-am.jpeg';
+import samuraiBushidoWhite from '../assets/images/dk-image/whatsapp-image-2026-10-17-9-04-38-am.jpeg';
+import samuraiBushidoDetail from '../assets/images/dk-image/whatsapp-image-2026-10-17-9-04-38-am-1.jpeg';
+import wideBootcutIndigo from '../assets/images/dk-image/whatsapp-image-2026-10-17-9-04-17-am.jpeg';
+import wideBootcutDarkBlue from '../assets/images/dk-image/whatsapp-image-2026-10-17-9-04-18-am-1.jpeg';
+import wideBootcutMediumBlue from '../assets/images/dk-image/whatsapp-image-2026-10-17-9-04-18-am.jpeg';
+import wideBaggyLightWash from '../assets/images/dk-image/whatsapp-image-2026-10-17-9-04-19-am.jpeg';
+import wideBaggyLightWashAlt from '../assets/images/dk-image/whatsapp-image-2026-10-17-9-04-19-am-1.jpeg';
+import wideBootcutCharcoalGrey from '../assets/images/dk-image/whatsapp-image-2026-10-17-9-04-30-am.jpeg';
+import creamWhite from '../assets/images/dk-image/whatsapp-image-2026-10-17-9-04-32-am.jpeg';
+import heatherGrey from '../assets/images/dk-image/whatsapp-image-2026-10-17-9-04-31-am.jpeg';
+import charcoalBlack from '../assets/images/dk-image/whatsapp-image-2026-10-17-9-04-31-am-1.jpeg';
+import dustyRose from '../assets/images/dk-image/whatsapp-image-2026-10-17-9-04-32-am-1.jpeg';
+import slateBlue from '../assets/images/dk-image/whatsapp-image-2026-10-17-9-04-33-am.jpeg';
+import detailSpecs from '../assets/images/dk-image/whatsapp-image-2026-10-17-9-04-30-am-1.jpeg';
+import trackpantBlackStripe from '../assets/images/dk-image/whatsapp-image-2026-10-17-9-04-34-am-1.jpeg';
+import trackpantIvoryStripe from '../assets/images/dk-image/whatsapp-image-2026-10-17-9-04-34-am.jpeg';
+import trackpantIvoryDetail from '../assets/images/dk-image/whatsapp-image-2026-10-17-9-04-34-am-2.jpeg';
+import trackpantBlackDetail from '../assets/images/dk-image/whatsapp-image-2026-10-17-9-04-35-am-1.jpeg';
+import logo from '../assets/images/dk-fashion-logo.png';
 
 export const DK_IMAGES = {
-  // DK NEO 2099 Streetwear Collection
   streetwear: {
-    evolveWhiteDeck: '/src/assets/images/dk-image/WhatsApp Image 2026-10-17 at 9.04.36 AM.jpeg',
-    evolveWhiteSlate: '/src/assets/images/dk-image/WhatsApp Image 2026-10-17 at 9.04.40 AM.jpeg',
-    evolveWhiteDetail: '/src/assets/images/dk-image/WhatsApp Image 2026-10-17 at 9.04.36 AM (1).jpeg',
-    futureCyberCarBlack: '/src/assets/images/dk-image/WhatsApp Image 2026-10-17 at 9.04.37 AM (1).jpeg',
-    futureCyberCityBlue: '/src/assets/images/dk-image/WhatsApp Image 2026-10-17 at 9.04.39 AM.jpeg',
-    futureCyberCityDetail: '/src/assets/images/dk-image/WhatsApp Image 2026-10-17 at 9.04.39 AM (1).jpeg',
-    awakenEyeWhite: '/src/assets/images/dk-image/WhatsApp Image 2026-10-17 at 9.04.41 AM (1).jpeg',
-    awakenEyeDetail: '/src/assets/images/dk-image/WhatsApp Image 2026-10-17 at 9.04.41 AM.jpeg',
-    samuraiBushidoWhite: '/src/assets/images/dk-image/WhatsApp Image 2026-10-17 at 9.04.38 AM.jpeg',
-    samuraiBushidoDetail: '/src/assets/images/dk-image/WhatsApp Image 2026-10-17 at 9.04.38 AM (1).jpeg',
+    evolveWhiteDeck,
+    evolveWhiteSlate,
+    evolveWhiteDetail,
+    futureCyberCarBlack,
+    futureCyberCityBlue,
+    futureCyberCityDetail,
+    awakenEyeWhite,
+    awakenEyeDetail,
+    samuraiBushidoWhite,
+    samuraiBushidoDetail,
   },
-
-  // Premium Denim & Jeans
   denim: {
-    wideBootcutIndigo: '/src/assets/images/dk-image/WhatsApp Image 2026-10-17 at 9.04.17 AM.jpeg',
-    wideBootcutDarkBlue: '/src/assets/images/dk-image/WhatsApp Image 2026-10-17 at 9.04.18 AM (1).jpeg',
-    wideBootcutMediumBlue: '/src/assets/images/dk-image/WhatsApp Image 2026-10-17 at 9.04.18 AM.jpeg',
-    wideBaggyLightWash: '/src/assets/images/dk-image/WhatsApp Image 2026-10-17 at 9.04.19 AM.jpeg',
-    wideBaggyLightWashAlt: '/src/assets/images/dk-image/WhatsApp Image 2026-10-17 at 9.04.19 AM (1).jpeg',
-    wideBootcutCharcoalGrey: '/src/assets/images/dk-image/WhatsApp Image 2026-10-17 at 9.04.30 AM.jpeg',
+    wideBootcutIndigo,
+    wideBootcutDarkBlue,
+    wideBootcutMediumBlue,
+    wideBaggyLightWash,
+    wideBaggyLightWashAlt,
+    wideBootcutCharcoalGrey,
   },
-
-  // Luxury Knit Palazzo & Loungewear
   palazzo: {
-    creamWhite: '/src/assets/images/dk-image/WhatsApp Image 2026-10-17 at 9.04.32 AM.jpeg',
-    heatherGrey: '/src/assets/images/dk-image/WhatsApp Image 2026-10-17 at 9.04.31 AM.jpeg',
-    charcoalBlack: '/src/assets/images/dk-image/WhatsApp Image 2026-10-17 at 9.04.31 AM (1).jpeg',
-    dustyRose: '/src/assets/images/dk-image/WhatsApp Image 2026-10-17 at 9.04.32 AM (1).jpeg',
-    slateBlue: '/src/assets/images/dk-image/WhatsApp Image 2026-10-17 at 9.04.33 AM.jpeg',
-    detailSpecs: '/src/assets/images/dk-image/WhatsApp Image 2026-10-17 at 9.04.30 AM (1).jpeg',
+    creamWhite,
+    heatherGrey,
+    charcoalBlack,
+    dustyRose,
+    slateBlue,
+    detailSpecs,
   },
-
-  // Luxury Athleisure & Sartorial Trousers
   trousers: {
-    trackpantBlackStripe: '/src/assets/images/dk-image/WhatsApp Image 2026-10-17 at 9.04.34 AM (1).jpeg',
-    trackpantIvoryStripe: '/src/assets/images/dk-image/WhatsApp Image 2026-10-17 at 9.04.34 AM.jpeg',
-    trackpantIvoryDetail: '/src/assets/images/dk-image/WhatsApp Image 2026-10-17 at 9.04.34 AM (2).jpeg',
-    trackpantBlackDetail: '/src/assets/images/dk-image/WhatsApp Image 2026-10-17 at 9.04.35 AM (1).jpeg',
+    trackpantBlackStripe,
+    trackpantIvoryStripe,
+    trackpantIvoryDetail,
+    trackpantBlackDetail,
   },
-
-  // Brand Logo
-  logo: '/src/assets/images/dk-fashion-logo.png',
+  logo,
 };
-
