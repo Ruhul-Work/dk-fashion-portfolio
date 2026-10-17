@@ -173,7 +173,7 @@ export const Hero: React.FC<HeroProps> = ({
       className="relative h-[290vh] bg-stone-50 text-stone-900"
     >
       {/* Sticky Fullscreen Presentation Container */}
-      <div className="sticky top-0 h-screen w-full flex flex-col justify-between overflow-hidden select-none">
+      <div className="sticky top-20 h-[calc(100svh-5rem)] w-full flex flex-col justify-between overflow-hidden select-none">
         
         {/* Soft Luxury Lightness Gradient Overlays (Removes the harsh pitch blackness) */}
         <div className="absolute inset-0 pointer-events-none z-0">
@@ -202,7 +202,7 @@ export const Hero: React.FC<HeroProps> = ({
           <svg
             aria-hidden="true"
             viewBox="0 0 360 380"
-            className="absolute -right-12 -bottom-20 w-72 sm:w-96 h-auto opacity-35 blur-[0.5px]"
+            className="absolute -right-8 -bottom-8 w-72 sm:-right-12 sm:-bottom-20 sm:w-96 h-auto opacity-50 sm:opacity-35 blur-[0.5px]"
           >
             <defs>
               <linearGradient id="hero-flower-petal" x1="0" y1="0" x2="1" y2="1">
