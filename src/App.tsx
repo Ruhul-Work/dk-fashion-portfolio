@@ -144,7 +144,9 @@ export default function App() {
         />
 
         {/* 2. Scrolling Marquee Kinetic Ticker 1 */}
-        <ScrollingMarquee speed={30} />
+        <div className="mt-4">
+          <ScrollingMarquee speed={30} />
+        </div>
 
         {/* 3. Category Section with 3D Tilt Cards */}
         <CategorySection

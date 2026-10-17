@@ -266,16 +266,16 @@ export const Hero: React.FC<HeroProps> = ({
             <div className="lg:col-span-7 space-y-5">
               
               {/* Dynamic Tag & Category Kicker */}
-              <div className="flex flex-col items-start gap-2">
-                 <div className="gradient-border-badge inline-flex items-center gap-2 rounded-full px-3 py-1 text-[11px] font-mono tracking-wider uppercase text-stone-700 backdrop-blur-md shadow-sm">
-                   <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
+              <div className="flex max-w-full flex-nowrap items-center gap-1.5">
+                 <div className="gradient-border-badge inline-flex shrink-0 items-center gap-1 rounded-full px-2 py-1 text-[0.6rem] font-mono tracking-[0.04em] uppercase text-stone-700 backdrop-blur-md shadow-sm sm:gap-2 sm:px-3 sm:text-[11px] sm:tracking-wider">
+                   <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-emerald-500 animate-pulse sm:h-2 sm:w-2" />
                    <span className="font-semibold text-stone-900">DK FASHION</span>
                    <span className="text-amber-900">EST. {BRAND_DETAILS.established}</span>
-                   <span className="text-stone-400">·</span>
-                   <span className="text-stone-600">KUALA LUMPUR</span>
+                   <span className="text-stone-400 max-[380px]:hidden">·</span>
+                   <span className="text-stone-600 max-[380px]:hidden">KUALA LUMPUR</span>
                  </div>
-                
-                <span className="inline-flex px-3 py-1 rounded-full text-xs font-semibold tracking-wide bg-white/75 border border-stone-300 text-stone-700 shadow-sm">
+
+                <span className="inline-flex min-w-0 shrink items-center overflow-hidden text-ellipsis whitespace-nowrap rounded-full border border-stone-300 bg-white/75 px-2 py-1 text-[0.6rem] font-semibold tracking-normal text-stone-700 shadow-sm sm:px-3 sm:text-xs sm:tracking-wide">
                   {activeItem.categoryName}
                 </span>
               </div>
@@ -338,7 +338,7 @@ export const Hero: React.FC<HeroProps> = ({
               </div>
 
               {/* Action Buttons Row */}
-              <div className="flex flex-wrap items-center gap-4 pt-3">
+              <div className="mb-4 flex flex-wrap items-center gap-4 pt-3 sm:mb-0">
                 <button
                   type="button"
                   onClick={onExploreClick}
